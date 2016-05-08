@@ -1,3 +1,9 @@
+## Online Demo
+
+We have removed API call functionality to ensure we do not accidentally expose any data. A live version of this application can be found on the following platform
+
+http://riot-challenge.herokuapp.com/
+
 ## League Competition Entry
 
 The following is an entry for the Riot API Challenge 2016, with a focus on Champion Masteries.
