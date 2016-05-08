@@ -70,6 +70,7 @@
         <div class="col-xs-3 center-block text-center">
           <img class="img-rounded champImage" v-bind:src="champInfo.details.imageUrl"/>
           <progress class="progress" style="padding-top:2px; padding-left:10px; height:8px; width:130px;" value="{{champInfo.mastery.championPoints}}" max="46800">{{ (champInfo.mastery.championPoints / 46800) * 100}}%</progress>
+          <img v-if="hasRankBadge()" class="img-rounded" src="{{getRankBadge()}}"/>
         </div>
         <div class="col-xs-9">
           <div class="row tags">
@@ -190,6 +191,34 @@
       champInfo : {}
     },
     methods: {
+      hasRankBadge: function() {
+      console.log("Test1: " + this.champInfo.mastery.championLevel);
+        return this.champInfo.mastery.championLevel > 0;
+      },
+
+      getRankBadge: function() {
+        if (this.champInfo.mastery.championLevel === 1) {
+          return "http://i.imgur.com/kt30jjX.png";
+        }
+
+        if (this.champInfo.mastery.championLevel === 2) {
+          return "http://i.imgur.com/asAJFxi.png";
+        }
+
+        if (this.champInfo.mastery.championLevel === 3) {
+          return "http://i.imgur.com/t2I7SrR.png";
+        }
+
+        if (this.champInfo.mastery.championLevel === 4) {
+          return "http://i.imgur.com/BPxz1LS.png";
+        }
+
+        if (this.champInfo.mastery.championLevel === 5) {
+          return "http://i.imgur.com/mFUaJxy.png";
+        }
+        return "";
+      },
+
       stripHtml : function(html) {
         var tmp = document.createElement("DIV");
         tmp.innerHTML = html;
