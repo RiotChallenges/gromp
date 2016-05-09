@@ -1,7 +1,7 @@
-![GRUMP](http://i.imgur.com/wuDPY42.png)
-# GRUMP
+![GROMP](http://i.imgur.com/wuDPY42.png)
+# GROMP
 
-GRUMP is a  League of Legends's website that focus's heavily on the users champions mastery. We move away from the norm of showing you your K:D Ratio, and try to push you
+GROMP is a  League of Legends's website that focus's heavily on the users champions mastery. We move away from the norm of showing you your K:D Ratio, and try to push you
 in a more social direction, with achievable end goals that you can be proud to reach and tweet about.
 
 This website has been created as a submission for Riot's **[API Challenge 2016](https://developer.riotgames.com/)**.
