@@ -3,7 +3,7 @@
  #pre-load { background: url('https://superbuytires.com/images/Loading.gif') no-repeat -9999px -9999px; }
 
  .landing-page-container {
-    margin: 100px auto;
+    margin: 60px auto;
     box-sizing: border-box;
     background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(34, 49, 63, 0.9));
     background-size: cover;
@@ -72,8 +72,7 @@
     <div class="container landing-page-container">
       <div class="col-xs-12">
         <div class="render"></div>
-       <span id="pre-load"></span>
-
+        <span id="pre-load"></span>
        <div class="form-container">
         <div class="row">
             <div class="col-xs-12">

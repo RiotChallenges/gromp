@@ -117,9 +117,9 @@ const AppStore = {
     },
 
     getChampionMasteryDetails : function(championId) {
-      return this._championMasteries.find(function(championMastery) {
+      return this._championMasteries.filter(function(championMastery) {
         return championMastery.championId === championId
-      });
+      })[0];
     },
 
     getXpForTag : function(tag) {

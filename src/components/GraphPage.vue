@@ -1,6 +1,5 @@
 <style scoped>
     .container {
-        margin: 25px auto;
     }
 
     .main-background {

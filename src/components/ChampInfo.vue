@@ -70,7 +70,7 @@
         <div class="col-xs-3 center-block text-center">
           <img class="img-rounded champImage" v-bind:src="champInfo.details.imageUrl"/>
           <progress class="progress" style="padding-top:2px; padding-left:10px; height:8px; width:130px;" value="{{champInfo.mastery.championPoints}}" max="46800">{{ (champInfo.mastery.championPoints / 46800) * 100}}%</progress>
-          <img v-if="hasRankBadge()" class="img-rounded" src="{{getRankBadge()}}"/>
+          <img v-if="hasRankBadge()" class="img-rounded" v-bind:src="getRankBadge()"/>
         </div>
         <div class="col-xs-9">
           <div class="row tags">
@@ -192,7 +192,6 @@
     },
     methods: {
       hasRankBadge: function() {
-      console.log("Test1: " + this.champInfo.mastery.championLevel);
         return this.champInfo.mastery.championLevel > 0;
       },
 

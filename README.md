@@ -1,16 +1,30 @@
-## Online Demo
+![GRUMP](http://i.imgur.com/wuDPY42.png)
+# GRUMP
 
-We have removed API call functionality to ensure we do not accidentally expose any data. A live version of this application can be found on the following platform
+GRUMP is a  League of Legends's website that focus's heavily on the users champions mastery. We move away from the norm of showing you your K:D Ratio, and try to push you
+in a more social direction, with achievable end goals that you can be proud to reach and tweet about.
 
+This website has been created as a submission for Riot's **[API Challenge 2016](https://developer.riotgames.com/)**.
+
+## Table of contents
+
+- [Demo](#demo)
+- [Features](#features)
+- [Programming language and Frameworks](#programming-language-and-frameworks)
+- [Local Development Setup](#local-development-setup)
+- [Deployment](#deployment)
+
+## Demo
+
+A demo of the website is available on Heroku, please check it out!
 http://riot-challenge.herokuapp.com/
 
-## League Competition Entry
+![brand hero page](http://i.imgur.com/KJuS1TD.png)
 
-The following is an entry for the Riot API Challenge 2016, with a focus on Champion Masteries.
 
-This entry goes outside of the regular online league tools (kills, deaths, rankings, ratings), to offer a more fun experience ranging from champion lore, to achievements based on mastery data. We have that the range of tools provided here are fun (achievements), and useful (which chests do I have unlocked?) and are used for some time to come.
+## Programming language and Frameworks
 
-This project was built entirely from the ground up, using VueJS and Boostrap.
+This project was built entirely from the ground up, using [VueJS](https://vuejs.org) and [Bootstrap](http://getbootstrap.com/) for the styling.
 
 ## Local Development Setup
 
@@ -31,3 +45,7 @@ heroku git:remote -a appname
 
 git push heroku master
 ```
+#### Art
+
+- [inkinesss](http://inkinesss.deviantart.com) : Created the background used as the background through the app.
+- All other art borrowed from Riot.

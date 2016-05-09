@@ -13,6 +13,7 @@
     <style>
         html,
         body {
+            color: #fff;
             height: 100%;
             font-family: 'Abel' !important;
         }
@@ -24,13 +25,10 @@
             width: 100%;
             background-color: #111;
             background: rgba(20, 20, 20, 1.0);
-            background: linear-gradient(#111111, #2574A9);
+            background: url('http://orig09.deviantart.net/d13e/f/2014/334/8/d/shadow_isles_by_inkinesss-d82m39q.jpg');
+            background-position: bottom center;
             background-size: cover;
             z-index: -5;
-        }
-
-        body {
-            color: #fff;
         }
 
         .center-block {
@@ -38,14 +36,101 @@
             margin: 0 auto;
         }
 
+        .clearfix {
+          padding-bottom:280px;
+        }
+
+        #desktop-container {
+          min-height:100%;
+          position:relative;
+        }
+
+         footer {
+            height:280px;
+            position:absolute;
+            bottom:0;
+            background-color: whitesmoke;
+            width: 100%;
+            padding: 10px 25px;
+            font-family: 'Lato';
+            margin-top: 150px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        footer h1 {
+            color: #16a085;
+            font-size: 1.7em;
+            text-align: center;
+        }
+
+        footer p {
+            color: #2c3e50;
+            line-height: 1.8em;
+            text-align: justify;
+        }
+
+        .icon {
+          color: black;
+          margin-top: 15px;
+          font-size: 5em;
+        }
+
+        @media (max-width: 1200px) {
+          footer p {
+            display: none;
+          }
+        }
     </style>
 </head>
 
 <body>
     <div class="page-background"></div>
 
-    <div id="desktop-container" class="container center-block">
-        <component :is="store.getActivePage()"></component>
+    <div id="desktop-container">
+        <div class="container center-block">
+            <component :is="store.getActivePage()"></component>
+        </div>
+        
+        <div v-show="store.getActivePage() == 'DialoguePage' || store.getActivePage() == 'LoadingPage'" class="clearfix"></div>
+
+        <footer v-show="store.getActivePage() == 'DialoguePage' || store.getActivePage() == 'LoadingPage'">
+            <div class="row">
+                <div class="col-xs-4">
+                      <div class="row">
+                        <div class="col-xs-12 text-center">
+                          <span class="glyphicon glyphicon-fire icon"></span>
+                        </div>
+                      </div>
+
+                      <h1>Track Your Mastery Points</h1>
+                      <p>Gromp gives you a simple, intuitive and comprehensive overview of your progress with each champion,
+                      providing you with a bustling repository of information for you to sharpen and hone your skills.</p>
+                </div>
+                <div class="col-xs-4">
+                      <div class="row">
+                        <div class="col-xs-12 text-center">
+                          <span class="glyphicon glyphicon-gift icon"></span>
+                        </div>
+                      </div>
+                      <h1>Collect And Share Achievements</h1>
+                      <p>With Gromp you can collect and share achievements that you'll find no where else. With a variety of tasks
+                      to try and complete with ranging difficulties, we guarentee you'll be in this for the long haul. Achievements
+                      are regularly updated, giving you new challenges to overcome.</p>
+                </div>
+
+                <div class="col-xs-4">
+                      <div class="row">
+                        <div class="col-xs-12 text-center">
+                          <span class="glyphicon glyphicon-object-align-bottom icon"></span>
+                        </div>
+                      </div>
+                      <h1>Analyse Your Progress</h1>
+                      <p>Gromp contains a variety of statistical tools, providing you with unique insight into your play styles
+                      with each champion. </p>
+                </div>
+            </div>
+      </footer>
     </div>
 
     <div id="mobile-container" style="display:none;">
@@ -57,6 +142,16 @@
 </body>
 
 </html>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15050127-2', 'auto');
+  ga('send', 'pageview');
+</script>
 
 <script>
     var md = new MobileDetect(window.navigator.userAgent);
