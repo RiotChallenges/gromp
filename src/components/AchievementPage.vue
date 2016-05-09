@@ -600,7 +600,7 @@
       getRankedTypeOfChampionTweet: function (tag) {
         var championsWithTag = AppStore.getAllChampionInformationForTag(tag);
         var championsMastered = Object.keys(championsWithTag.filter(function(value) {
-            return (value.mastery.highestGrade !== 'Unranked');
+            return (value.mastery.championLevel > 1);
         })).length;
 
         if (championsWithTag.length == championsMastered) {
@@ -612,7 +612,7 @@
       getRankedCountForTag: function(tag) {
         var championsWithTag = AppStore.getAllChampionInformationForTag(tag);
         return Object.keys(championsWithTag.filter(function(value) {
-            return (value.mastery.highestGrade !== 'Unranked');
+          return (value.mastery.championLevel > 1);
         })).length;
       },
     },
